@@ -1,0 +1,647 @@
+@font-face {
+  font-family: Product Sans;
+  src: url("../src/fonts/ProductSans/Product Sans 400.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #edf2f7;
+  height: 100vh;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 15px;
+}
+
+.App-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 193px;
+  height: 100%;
+  background-color: #fdfdff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border-radius: 0 25px 25px 0;
+  padding: 32px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.App-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: calc(100% - 193px - 290px);
+  height: 100%;
+}
+
+.App-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 290px;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #fdfdff;
+  border-radius: 25px 0 0 25px;
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.App-logo {
+  width: 130px;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.App-dashContainer {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App-optionTitle {
+  width: 100%;
+  height: 28px;
+  padding-left: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-optionTitle > h3 {
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #b8bbbf;
+}
+
+.App-option {
+  width: 100%;
+  height: 36px;
+  padding-left: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+  background-color: #fdfdff;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.App-option:hover {
+  background-color: #fff0e5;
+}
+
+.App-option:hover > h2 {
+  background-color: #f47a20;
+}
+
+.App-option:hover > h3 {
+  color: #f47a20;
+}
+
+.App-option > h2 {
+  width: 15px;
+  height: 15px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fdfdff;
+  background-color: #141413;
+  border-radius: 15px;
+  margin-right: 14px;
+}
+
+.App-option > h3 {
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+}
+
+.App-ayuda {
+  width: 100%;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 48px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+  background-color: #fdfdff;
+}
+
+.App-ayuda:hover {
+  background-color: #fff0e5;
+}
+
+.App-ayuda:hover > svg {
+  fill: #141413;
+}
+
+.App-ayuda:hover > h4 {
+  color: #141413;
+}
+
+.App-ayuda > svg {
+  width: 15px;
+  height: 15px;
+  fill: #b8bbbf;
+  margin-right: 14px;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+}
+
+.App-ayuda > h4 {
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  color: #b8bbbf;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+}
+
+.App-calification {
+  width: 459px;
+  height: 40px;
+  background-color: #fdfdff;
+  border-radius: 0px 0px 15px 15px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+
+.App-calification > h3 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+}
+
+.App-viewCalification {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #f47a20;
+}
+
+.App-bar {
+  width: 212px;
+}
+
+.App-bar svg {
+  height: 100% !important;
+}
+
+.App-bar svg > path {
+  stroke-linecap: round;
+}
+
+.App-centerContainer {
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+.App-mainWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.App-mainSlide {
+  width: 100%;
+  height: 100;
+  padding: 32px;
+}
+
+.App-context {
+  width: 100%;
+  height: 338px;
+  background-color: #edf2f7;
+  border-radius: 12px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-imgContext {
+  width: 95px;
+  height: 95px;
+  border-radius: 50px;
+  background-color: #b8bbbf;
+}
+
+.App-titleContext {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #141413;
+  width: 100%;
+}
+
+.App-infoContext {
+  width: 100%;
+  height: 150px;
+}
+
+.App-infoContext > p {
+  font-family: Product Sans, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  color: #141413;
+  margin-bottom: 10px;
+}
+
+.App-slideInstru {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-instruSwiper {
+  width: 100%;
+  height: 518px;
+}
+
+.App-instruWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.App-instru {
+  width: 695px !important;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #fdfdff;
+  border-radius: 25px;
+  padding: 32px;
+}
+
+.App-instruPag {
+  width: 206px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-btnInstruPrev {
+  width: 36px;
+  height: 100%;
+  background-color: #fdfdff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: ease-in-out all .3s;
+  transition: ease-in-out all .3s;
+}
+
+.App-btnInstruPrev:hover {
+  background-color: #ffc499;
+}
+
+.App-btnInstruPrev:hover > svg > path {
+  fill: #fdfdff;
+}
+
+.App-btnInstruPrev > svg {
+  width: 15px;
+  height: 12.5px;
+}
+
+.App-btnInstruPrev > svg > path {
+  fill: #b8bbbf;
+}
+
+.App-instruPagIndex {
+  width: 108px;
+  height: 100%;
+  background-color: #fdfdff;
+  border-radius: 10px;
+}
+
+.App-btnInstruNext {
+  width: 36px;
+  height: 100%;
+  background-color: #fdfdff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: ease-in-out all .3s;
+  transition: ease-in-out all .3s;
+}
+
+.App-btnInstruNext:hover {
+  background-color: #ffc499;
+}
+
+.App-btnInstruNext:hover > svg > path {
+  fill: #fdfdff;
+}
+
+.App-btnInstruNext > svg {
+  width: 15px;
+  height: 12.5px;
+}
+
+.App-btnInstruNext > svg > path {
+  fill: #b8bbbf;
+}
+
+.Shadow {
+  -webkit-box-shadow: 0px 4px 15px rgba(20, 20, 19, 0.12);
+          box-shadow: 0px 4px 15px rgba(20, 20, 19, 0.12);
+}
+/*# sourceMappingURL=styles.css.map */

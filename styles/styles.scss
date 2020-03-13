@@ -1,0 +1,546 @@
+@font-face {
+    font-family: Product Sans;
+    src: url('../src/fonts/ProductSans/Product\ Sans\ 400.ttf');
+}
+
+$fontTitle: 'Poppins',
+sans-serif;
+$fontText: Product Sans,
+sans-serif;
+
+$greenColor: rgb(0, 135, 82);
+$orangeColor: rgb(244, 122, 32);
+$whiteColor: rgb(253, 253, 255);
+$blackColor: rgb(20, 20, 19);
+$lightOrangeColor: rgb(255, 196, 153);
+$lightGreenColor: rgb(141, 198, 63);
+$extraLightOrangeColor: rgb(255, 240, 229);
+$grayColor: rgb(237, 242, 247);
+$darkGrayColor: rgb(184, 187, 191);
+$orangeGradient: linear-gradient(180deg, $lightOrangeColor 0%, rgba(255, 196, 153, 0) 100%),
+$orangeColor;
+
+$leftWidth: 193px;
+$rightWidth: 290px;
+
+$verticalPadding: 32px;
+$calificationHeight: 40px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: $grayColor;
+    height: 100vh;
+}
+
+.App {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    &-left {
+        display: flex;
+        width: $leftWidth;
+        height: 100%;
+        background-color: $whiteColor;
+
+        flex: 0 0 auto;
+        border-radius: 0 25px 25px 0;
+
+        padding: $verticalPadding 0;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: center;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    &-center {
+        display: flex;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+
+        position: relative;
+
+        width: calc(100% - #{$leftWidth} - #{$rightWidth});
+        height: 100%;
+    }
+
+    &-right {
+        display: flex;
+        flex: 0 0 auto;
+
+        width: $rightWidth;
+        height: 100%;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        background-color: $whiteColor;
+        border-radius: 25px 0 0 25px;
+
+        padding: $verticalPadding;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    &-logo {
+        width: 130px;
+        height: 33px;
+
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    &-dashContainer {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-optionTitle {
+        width: 100%;
+        height: 28px;
+        padding-left: 48px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+
+        >h3 {
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+
+            color: $darkGrayColor;
+        }
+    }
+
+    &-option {
+        width: 100%;
+        height: 36px;
+        padding-left: 48px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+
+        transition: all ease-in-out .2s;
+        background-color: $whiteColor;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $extraLightOrangeColor;
+
+            >h2 {
+                background-color: $orangeColor;
+            }
+
+            >h3 {
+                color: $orangeColor;
+            }
+        }
+
+        >h2 {
+
+            width: 15px;
+            height: 15px;
+
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: $whiteColor;
+
+            background-color: $blackColor;
+            border-radius: 15px;
+
+            margin-right: 14px;
+        }
+
+        >h3 {
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+
+            color: $blackColor;
+        }
+
+        cursor: pointer;
+    }
+
+    &-ayuda {
+        width: 100%;
+        height: 36px;
+
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+
+        padding-left: 48px;
+
+        cursor: pointer;
+
+        transition: all ease-in-out .2s;
+        background-color: $whiteColor;
+
+        &:hover {
+            background-color: $extraLightOrangeColor;
+
+            >svg {
+                fill: $blackColor;
+            }
+
+            >h4 {
+                color: $blackColor;
+            }
+        }
+
+        >svg {
+            width: 15px;
+            height: 15px;
+            fill: $darkGrayColor;
+
+            margin-right: 14px;
+            transition: all ease-in-out .2s;
+        }
+
+        >h4 {
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 13px;
+
+            color: $darkGrayColor;
+            transition: all ease-in-out .2s;
+        }
+    }
+
+    &-calification {
+        width: 459px;
+        height: $calificationHeight;
+
+        background-color: $whiteColor;
+        border-radius: 0px 0px 15px 15px;
+
+        padding: 10px 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+
+        cursor: pointer;
+
+        >h3 {
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+
+            color: $blackColor;
+        }
+    }
+
+    &-viewCalification {
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: $orangeColor;
+    }
+
+    &-bar {
+        width: 212px;
+
+        svg {
+
+            height: 100% !important;
+
+            >path {
+                stroke-linecap: round;
+            }
+        }
+    }
+
+    &-centerContainer {
+        width: 100%;
+        height: calc(100% - #{$calificationHeight});
+    }
+
+    &-mainWrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-mainSlide {
+        width: 100%;
+        height: 100;
+        padding: $verticalPadding;
+    }
+
+    &-context {
+        width: 100%;
+        height: 338px;
+
+        background-color: $grayColor;
+        border-radius: 12px;
+
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: center;
+    }
+
+    &-imgContext {
+        width: 95px;
+        height: 95px;
+
+        border-radius: 50px;
+
+        background-color: $darkGrayColor;
+    }
+
+    &-titleContext {
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        color: $blackColor;
+        width: 100%;
+    }
+
+    &-infoContext {
+        width: 100%;
+        height: 150px;
+
+        >p {
+            font-family: $fontText;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 13px;
+
+            color: $blackColor;
+
+            margin-bottom: 10px;
+        }
+    }
+
+    //SLIDES
+    &-slideInstru {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    //INSTRU
+    &-instruSwiper {
+        width: 100%;
+        height: 518px;
+    }
+
+    &-instruWrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-instru {
+        width: 695px !important;
+        height: 100%;
+
+        flex-shrink: 0;
+
+        background-color: $whiteColor;
+        border-radius: 25px;
+        padding: $verticalPadding;
+    }
+
+    &-instruPag {
+        width: 206px;
+        height: 36px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    &-btnInstruPrev {
+        width: 36px;
+        height: 100%;
+        background-color: $whiteColor;
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        transition: ease-in-out all .3s;
+
+        &:hover {
+            background-color: $lightOrangeColor;
+
+            >svg {
+    
+                >path {
+                    fill: $whiteColor;
+                }
+            }
+        }
+
+        >svg {
+            width: 15px;
+            height: 12.5px;
+
+            >path {
+                fill: $darkGrayColor;
+            }
+        }
+    }
+
+    &-instruPagIndex {
+        width: 108px;
+        height: 100%;
+        background-color: $whiteColor;
+        border-radius: 10px;
+    }
+
+    &-btnInstruNext {
+        width: 36px;
+        height: 100%;
+        background-color: $whiteColor;
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        transition: ease-in-out all .3s;
+
+        &:hover {
+            background-color: $lightOrangeColor;
+
+            >svg {
+    
+                >path {
+                    fill: $whiteColor;
+                }
+            }
+        }
+
+        >svg {
+            width: 15px;
+            height: 12.5px;
+
+            >path {
+                fill: $darkGrayColor;
+            }
+        }
+
+    }
+
+}
+
+.Shadow {
+    box-shadow: 0px 4px 15px rgba($blackColor, 0.12);
+}
+
+//CUSTOM CSS FROM SWIPER LIB
