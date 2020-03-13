@@ -13,11 +13,11 @@ var mySwiperInstru = new Swiper('.App-instruSwiper', {
 });
 
 btn_InstruPrev.addEventListener("click", () => {
-  mySwiperInstru.slidePrev(800);
+  mySwiperInstru.slidePrev(500);
 });
 
 btn_InstruNext.addEventListener("click", () => {
-  mySwiperInstru.slideNext(800);
+  mySwiperInstru.slideNext(500);
 });
 
 //PROGRESS BAR
@@ -43,7 +43,6 @@ var bar = new ProgressBar.Line(progressBar, {
 bar.animate(0.0);
 
 //CONTEXT DATA
-
 
 
 
@@ -114,8 +113,8 @@ function OnSlideChange() {
 
 function SetSlideIndex(value){
   indexSlide = value;
-  mySwiper.slideTo(indexSlide, 800);
-  //mySwiper.slideTo(indexSlide, 800, runCallbacks);
+  mySwiper.slideTo(indexSlide, 500);
+  //mySwiper.slideTo(indexSlide, 500, runCallbacks);
 }
 
 //////VIDEO SYSTEM//////
