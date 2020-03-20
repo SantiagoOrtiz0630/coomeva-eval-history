@@ -1,73 +1,55 @@
-[{
-    "question": "¿Qué cubrimiento garantiza el fondo mutual?",
-    "options": [{
-        "data": "Eventos que afecten la integridad de su vivienda o vehículos.",
-        "value": 0,
-        "id": 0
-      },
-      {
-        "data": "Eventos que afecten su integridad y la de su familia.",
-        "value": 10,
-        "id": 1
-      },
-      {
-        "data": "Eventos que afecten la integridad de su familia.",
-        "value": 5,
-        "id": 2
-      },
-      {
-        "data": "Eventos que afecten su integridad.",
-        "value": 5,
-        "id": 3
-      }
-    ]
-  },
-  {
-    "question": "¿Qué productos ofrece el Fondo de Solidaridad?",
-    "options": [{
-        "data": "...solo el plan Plan básico de especial.",
-        "value": 5,
-        "id": 0
-      },
-      {
-        "data": "Plan solvencia",
-        "value": 0,
-        "id": 1
-      },
-      {
-        "data": "Plan básico de protección y Plan básico de especial.",
-        "value": 10,
-        "id": 2
-      },
-      {
-        "data": "Plan básico de protección,  Plan básico de especial y Plan solvencia.",
-        "value": 5,
-        "id": 3
-      }
-    ]
-  },
-  {
-    "question": "¿Cuáles son los Amparos de protección que cubre el plan básico?",
-    "options": [{
-        "data": "Muerte Accidental y Incapacidad permanente solo al asociado.",
-        "value": 0,
-        "id": 0
-      },
-      {
-        "data": "Muerte e Incapacidad Permanente.",
-        "value": 5,
-        "id": 1
-      },
-      {
-        "data": "Muerte Accidental y Gran Invalidez.",
-        "value": 5,
-        "id": 2
-      },
-      {
-        "data": "Muerte, Muerte Accidental, Gran invalidez e Incapacidad permanente parcial.",
-        "value": 10,
-        "id": 3
-      }
-    ]
-  }
-]
+{
+  "options": [{
+    "data": "Es un capital, que construye el asociado, y que recibirá a la edad de 60, 65 ó 70 años, de acuerdo con lo que haya elegido en el momento de su vinculación y le permite tener un complemento al momento de pensionarse.",
+    "id": 0,
+    "topic": "Amparos de Protección",
+    "topic_id": 0,
+    "unit": "Unidad 3: Plan Básico"
+  }, {
+    "data": "Cubre muertes, muerte accidental, gran invalidez e incapacidad permanente o parcial.",
+    "id": 1,
+    "topic": "Amparos de perseverancia",
+    "topic_id": 1,
+    "unit": "Unidad 3: Plan Básico"
+  }, {
+    "data": "Comprende ayudas y servicios en aspectos como por ejemplo gastos funerarios por muerte de un asociado, renta por desempleo, disminución de ingresos y enfermedades graves, amparo por muerte del asociado o una segunda opinión médica, entre otras.",
+    "id": 2,
+    "topic": "Renta daría por incapacidad temporal",
+    "topic_id": 2,
+    "unit": "Unidad 3: Plan Básico"
+  }, {
+    "data": "Permite que, en caso de que el asociado llegue a quedar incapacitado temporalmente para el desarrollo normal de sus actividades, como consecuencia de una enfermedad o una cirugía no preexistente o por accidente, reciba una renta diaria de libre destino a partir del onceavo día consecutivo y hasta 180 días continuos o discontinuos de incapacidad ocasionados por un mismo evento.",
+    "id": 3,
+    "topic": "Auxilios y servicios adicionales",
+    "topic_id": 3,
+    "unit": "Unidad 3: Plan Básico"
+  }],
+  "categories": [{
+    "title": "Amparos de Protección",
+    "id": 0
+  }, {
+    "title": "Amparos de perseverancia",
+    "id": 1
+  }, {
+    "title": "Renta daría por incapacidad temporal",
+    "id": 2
+  }, {
+    "title": "Auxilios y servicios adicionales",
+    "id": 3
+  }],
+  "emojiResult": [{
+    "id": 0,
+    "data": "Debes esforzarte algo más, vuelve a intentarlo."
+  }, {
+    "id": 1,
+    "data": "Se nota que has aprendido algo, pero puedes mejorar."
+  }, {
+    "id": 2,
+    "data": "Muy bien, has aprendido bastante. Aún puedes aprender algo más."
+  }, {
+    "id": 3,
+    "data": "¡Genial! Has demostrado un gran dominio de los tenas."
+  }],
+  "error_score": 15,
+  "score_limits": [0, 50, 75, 90]
+}

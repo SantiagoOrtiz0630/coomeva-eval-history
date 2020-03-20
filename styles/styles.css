@@ -119,12 +119,6 @@ body {
           flex: 0 0 auto;
   width: 290px;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   background-color: #fdfdff;
   border-radius: 25px 0 0 25px;
   padding: 32px;
@@ -178,10 +172,10 @@ body {
 }
 
 .App-optionTitle > h3 {
-  font-family: Product Sans, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,7 +254,7 @@ body {
   font-family: Product Sans, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,6 +263,73 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #141413;
+}
+
+.App-option-disabled {
+  width: 100%;
+  height: 36px;
+  padding-left: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+  background-color: #fdfdff;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.App-option-disabled > h2 {
+  width: 15px;
+  height: 15px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fdfdff;
+  background-color: #b8bbbf;
+  border-radius: 15px;
+  margin-right: 14px;
+}
+
+.App-option-disabled > h3 {
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #b8bbbf;
 }
 
 .App-ayuda {
@@ -303,17 +364,17 @@ body {
 }
 
 .App-ayuda:hover > svg {
-  fill: #141413;
+  fill: #f47a20;
 }
 
 .App-ayuda:hover > h4 {
-  color: #141413;
+  color: #f47a20;
 }
 
 .App-ayuda > svg {
   width: 15px;
   height: 15px;
-  fill: #b8bbbf;
+  fill: #141413;
   margin-right: 14px;
   -webkit-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s;
@@ -323,9 +384,9 @@ body {
   font-family: Product Sans, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 13px;
-  color: #b8bbbf;
+  color: #141413;
   -webkit-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s;
 }
@@ -417,6 +478,33 @@ body {
   padding: 32px;
 }
 
+.App-rightWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.App-contextSlide {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .App-context {
   width: 100%;
   height: 338px;
@@ -483,6 +571,736 @@ body {
   margin-bottom: 10px;
 }
 
+.App-indication {
+  width: 100%;
+  height: auto;
+  background-color: #edf2f7;
+  border-radius: 12px;
+  padding: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.App-indication > h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #141413;
+}
+
+.App-indication > p {
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #141413;
+}
+
+.App-animation {
+  width: 100%;
+  height: 60px;
+  background-color: #b8bbbf;
+  margin: 16px 0;
+}
+
+.App-gradientFooter {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  z-index: 1;
+}
+
+.App-slideResult {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-feedback {
+  width: 459px;
+  height: 443px;
+  background-color: #fdfdff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  position: relative;
+}
+
+.App-feedbackTop {
+  width: 100%;
+  height: 101px;
+  background-image: url("../src/img/feedback.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px 25px 5px 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.App-feedbackTitle {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  border-bottom: 2px solid #fdfdff;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.03em;
+  color: #fdfdff;
+}
+
+.App-feedButton {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 32px;
+}
+
+.App-btn {
+  cursor: pointer;
+  width: 150px;
+  height: 36px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #fdfdff;
+  -webkit-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+  border: 2px solid #f47a20;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-btn:hover {
+  background-color: #f47a20;
+}
+
+.App-btn:hover > svg {
+  fill: #fdfdff;
+  stroke: #fdfdff;
+}
+
+.App-btn:hover > h3 {
+  color: #fdfdff;
+}
+
+.App-btn > svg {
+  fill: #f47a20;
+  stroke: #f47a20;
+  margin-right: 13px;
+  -webkit-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+}
+
+.App-btn > h3 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f47a20;
+  -webkit-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+}
+
+.App-feedbackList {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-y: auto;
+}
+
+.App-feedbackItem {
+  width: 100%;
+  height: 64px;
+  background-color: #edf2f7;
+  border-radius: 15px;
+  padding: 16px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+}
+
+.App-feedbackItem > p {
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #141413;
+}
+
+.App-resultContext {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.App-resultTitle {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  border-bottom: 2px solid #edf2f7;
+  margin-bottom: 30px;
+}
+
+.App-badgeImg {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.App-emojiContent {
+  width: 100%;
+  height: 40px;
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.App-emojiImg {
+  width: 30px;
+  height: 30px;
+}
+
+.App-emojiData {
+  width: 125px;
+  height: 100%;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+}
+
+.App-resultTime {
+  background-color: #edf2f7;
+  border-radius: 15px;
+  width: 100%;
+  height: 64px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.App-resultTime > h3 {
+  width: 87px;
+  height: 23px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+}
+
+.App-resultCalification {
+  background-color: #edf2f7;
+  border-radius: 15px;
+  width: 100%;
+  height: 64px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.App-resultCalification > h3 {
+  width: 87px;
+  height: 23px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+}
+
+.App-resultMistake {
+  background-color: #edf2f7;
+  border-radius: 15px;
+  width: 100%;
+  height: 64px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-resultMistake > h3 {
+  width: 87px;
+  height: 23px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+}
+
+.App-circleData {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.App-circleData > p {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #141413;
+}
+
+.App-orangeText {
+  color: #f47a20 !important;
+}
+
+.App-greenText {
+  color: #8dc63f !important;
+}
+
+.App-list {
+  width: 175px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #fdfdff;
+  border-radius: 25px;
+}
+
+.App-listTop {
+  width: 100%;
+  height: 86px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px 25px 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-justify: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 15px;
+  color: #fdfdff;
+  padding: 20px;
+}
+
+.App-listSortable {
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 50px;
+  height: auto;
+}
+
+.App-slideActivity {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.App-optionsTitle {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #141413;
+  padding: 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #edf2f7;
+  margin-bottom: 30px;
+}
+
+.App-optionList {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.App-activityOption {
+  cursor: pointer;
+  background-color: #edf2f7;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #141413;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.App-activityOption > h5 {
+  display: none;
+}
+
+.App-activityOption-correct {
+  background-color: #baf7e1;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #141413;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.App-activityOption-correct > h5 {
+  display: none;
+}
+
+.App-activityOption-mistake {
+  background-color: #f7c6cf;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #141413;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.App-activityOption-mistake > h5 {
+  display: none;
+}
+
+.App-activityOption-ghost {
+  background-color: #b8bbbf;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #141413;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  z-index: 100;
+}
+
+.App-activityOption-ghost > h5 {
+  display: none;
+}
+
 .App-slideInstru {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,7 +1340,86 @@ body {
       flex-shrink: 0;
   background-color: #fdfdff;
   border-radius: 25px;
-  padding: 32px;
+  padding: calc(32px + 3px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  cursor: pointer;
+}
+
+.App-instruTitle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  color: #141413;
+}
+
+.App-instruContainer {
+  width: 100%;
+  height: calc(100% - 34px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App-instruIMG {
+  width: 389px;
+  height: 216px;
+  border-radius: 12px;
+  margin: 44px 0;
+}
+
+.App-instruText {
+  width: 407px;
+  font-family: Product Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #141413;
 }
 
 .App-instruPag {
@@ -642,8 +1539,57 @@ body {
   fill: #b8bbbf;
 }
 
-.Shadow {
-  -webkit-box-shadow: 0px 4px 15px rgba(20, 20, 19, 0.12);
-          box-shadow: 0px 4px 15px rgba(20, 20, 19, 0.12);
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #edf2f7;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #b8bbbf;
+  border-radius: 5px;
+}
+
+.toast-info {
+  background-color: #8dc63f !important;
+}
+
+.toast-message {
+  color: #fdfdff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.toast-error {
+  background-color: #f47a20 !important;
+}
+
+#toast-container > div {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 10px;
+  opacity: 1;
+  cursor: pointer;
+  padding: 15px 15px 15px 25px;
+}
+
+#toast-container > div:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+#toast-container > .toast-info {
+  background-image: none !important;
+  display: none;
+}
+
+#toast-container > .toast-error {
+  background-image: none !important;
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

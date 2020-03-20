@@ -17,6 +17,10 @@ $lightGreenColor: rgb(141, 198, 63);
 $extraLightOrangeColor: rgb(255, 240, 229);
 $grayColor: rgb(237, 242, 247);
 $darkGrayColor: rgb(184, 187, 191);
+
+$correctColor: rgb(186, 247, 225);
+$mistakeColor: rgb(247, 198, 207);
+
 $orangeGradient: linear-gradient(180deg, $lightOrangeColor 0%, rgba(255, 196, 153, 0) 100%),
 $orangeColor;
 
@@ -105,9 +109,6 @@ body {
         width: $rightWidth;
         height: 100%;
 
-        flex-direction: column;
-        flex-wrap: nowrap;
-
         background-color: $whiteColor;
         border-radius: 25px 0 0 25px;
 
@@ -146,10 +147,10 @@ body {
         align-items: center;
 
         >h3 {
-            font-family: $fontText;
+            font-family: $fontTitle;
             font-style: normal;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 12px;
             line-height: 13px;
             display: flex;
             align-items: center;
@@ -214,12 +215,67 @@ body {
             font-family: $fontText;
             font-style: normal;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 12px;
             line-height: 13px;
             display: flex;
             align-items: center;
 
             color: $blackColor;
+        }
+
+        cursor: pointer;
+    }
+
+    &-option-disabled{
+        width: 100%;
+        height: 36px;
+        padding-left: 48px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+
+        transition: all ease-in-out .2s;
+        background-color: $whiteColor;
+
+        cursor: pointer;
+
+        >h2 {
+
+            width: 15px;
+            height: 15px;
+
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: $whiteColor;
+
+            background-color: $darkGrayColor;
+            border-radius: 15px;
+
+            margin-right: 14px;
+        }
+
+        >h3 {
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+
+            color: $darkGrayColor;
         }
 
         cursor: pointer;
@@ -248,18 +304,18 @@ body {
             background-color: $extraLightOrangeColor;
 
             >svg {
-                fill: $blackColor;
+                fill: $orangeColor;
             }
 
             >h4 {
-                color: $blackColor;
+                color: $orangeColor;
             }
         }
 
         >svg {
             width: 15px;
             height: 15px;
-            fill: $darkGrayColor;
+            fill: $blackColor;
 
             margin-right: 14px;
             transition: all ease-in-out .2s;
@@ -269,10 +325,10 @@ body {
             font-family: $fontText;
             font-style: normal;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 12px;
             line-height: 13px;
 
-            color: $darkGrayColor;
+            color: $blackColor;
             transition: all ease-in-out .2s;
         }
     }
@@ -352,6 +408,24 @@ body {
         padding: $verticalPadding;
     }
 
+    /////RIGHT SWIPER/////
+    &-rightWrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-contextSlide {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+    }
+
     &-context {
         width: 100%;
         height: 338px;
@@ -409,7 +483,652 @@ body {
         }
     }
 
-    //SLIDES
+    &-indication {
+        width: 100%;
+        height: auto;
+
+        background-color: $grayColor;
+        border-radius: 12px;
+
+        padding: 22px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: center;
+
+        margin-bottom: 30px;
+
+        >h2 {
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: $blackColor;
+        }
+
+        >p {
+            font-family: $fontText;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 15px;
+
+            color: $blackColor;
+        }
+    }
+
+    &-animation {
+        width: 100%;
+        height: 60px;
+
+        background-color: $darkGrayColor;
+
+        margin: 16px 0;
+    }
+
+    &-gradientFooter {
+        position: absolute;
+        right: 0;
+        bottom: 32px;
+        z-index: 1;
+    }
+
+    //FEEDBACK SLIDE
+    &-slideResult {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    &-feedback {
+        width: 459px;
+        height: 443px;
+
+        background-color: $whiteColor;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        border-radius: 25px;
+
+        position: relative;
+    }
+
+    &-feedbackTop {
+        width: 100%;
+        height: 101px;
+
+        background-image: url('../src/img/feedback.png');
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 25px 25px 5px 5px;
+
+        position: relative;
+
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    &-feedbackTitle {
+        position: absolute;
+
+        bottom: 25px;
+        left: 30px;
+
+        padding-bottom: 6px;
+        padding-right: 10px;
+        border-bottom: 2px solid $whiteColor;
+
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+
+        color: $whiteColor;
+    }
+
+    &-feedButton {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        padding: $verticalPadding;
+    }
+
+    &-btn {
+
+        cursor: pointer;
+
+        width: 150px;
+        height: 36px;
+
+        flex-shrink: 0;
+
+        background-color: $whiteColor;
+        transition: .2s ease-in-out all;
+
+        border: 2px solid $orangeColor;
+
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $orangeColor;
+
+            >svg {
+                fill: $whiteColor;
+                stroke: $whiteColor;
+            }
+
+            >h3{
+                color: $whiteColor;
+            }
+        }
+
+        >svg {
+            fill: $orangeColor;
+            stroke: $orangeColor;
+
+            margin-right: 13px;
+            transition: .2s ease-in-out all;
+        }
+
+        >h3 {
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+
+            display: flex;
+            align-items: center;
+
+            color: $orangeColor;
+            transition: .2s ease-in-out all;
+        }
+    }
+
+    &-feedbackList {
+        width: 100%;
+        //height: calc(100% - 101px);
+        height: auto;
+
+        display: flex;
+        flex: 1 1 auto;
+
+        padding: 30px;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        overflow-y: auto;
+    }
+
+    &-feedbackItem {
+        width: 100%;
+        height: 64px;
+
+        background-color: $grayColor;
+        border-radius: 15px;
+
+        padding: 16px 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-bottom: 15px;
+
+        >p {
+            font-family: $fontText;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+
+            color: $blackColor;
+        }
+    }
+
+    &-resultContext {
+        justify-content: flex-start;
+    }
+
+    &-resultTitle {
+        width: 100%;
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        color: $blackColor;
+
+        padding-bottom: 6px;
+        padding-right: 10px;
+
+        border-bottom: 2px solid $grayColor;
+
+        margin-bottom: 30px;
+    }
+
+    &-badgeImg {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &-emojiContent {
+        width: 100%;
+        height: 40px;
+
+        padding: 0 25px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        margin-bottom: 30px;
+    }
+
+    &-emojiImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    &-emojiData {
+        width: 125px;
+        height: 100%;
+
+        font-family: $fontText;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: $blackColor;
+    }
+
+    &-resultTime {
+        background-color: $grayColor;
+        border-radius: 15px;
+
+        width: 100%;
+        height: 64px;
+
+        padding: 10px 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        margin-bottom: 10px;
+
+        >h3 {
+            width: 87px;
+            height: 23px;
+
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+
+            color: $blackColor;
+        }
+    }
+
+    &-resultCalification {
+        background-color: $grayColor;
+        border-radius: 15px;
+
+        width: 100%;
+        height: 64px;
+
+        padding: 10px 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        margin-bottom: 10px;
+
+        >h3 {
+            width: 87px;
+            height: 23px;
+
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+
+            color: $blackColor;
+        }
+    }
+
+    &-resultMistake {
+        background-color: $grayColor;
+        border-radius: 15px;
+
+        width: 100%;
+        height: 64px;
+
+        padding: 10px 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        >h3 {
+            width: 87px;
+            height: 23px;
+
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+
+            color: $blackColor;
+        }
+    }
+
+    &-circleData {
+        width: 44px;
+        height: 44px;
+
+        position: relative;
+
+        >p {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+
+            font-family: $fontTitle;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+
+            color: $blackColor;
+        }
+    }
+
+    &-orangeText{
+        color: $orangeColor !important;
+    }
+
+    &-greenText{
+        color: $lightGreenColor !important;
+    }
+
+    //LIST
+    &-list {
+        width: 175px;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+
+        background-color: $whiteColor;
+
+        border-radius: 25px;
+    }
+
+    &-listTop {
+        width: 100%;
+        height: 86px;
+
+        background-position: center;
+        background-size: cover;
+
+        border-radius: 25px 25px 5px 5px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-justify: center;
+        text-align: center;
+
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 15px;
+
+        color: $whiteColor;
+
+        padding: 20px;
+    }
+
+    &-listSortable {
+        width: 100%;
+
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        min-height: 50px;
+
+        height: auto;
+    }
+
+    //ACTIVITY
+    &-slideActivity {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-start;
+    }
+
+    &-optionsTitle {
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+
+        color: $blackColor;
+
+        padding: 0 12px;
+        padding-bottom: 6px;
+
+        border-bottom: 2px solid $grayColor;
+
+        margin-bottom: 30px;
+    }
+
+    &-optionList {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+
+        flex: 1 1 auto;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+
+        overflow-y: auto;
+
+        padding-right: 15px;
+    }
+
+    &-activityOption {
+        cursor: pointer;
+
+        background-color: $grayColor;
+        width: 100%;
+        height: auto;
+
+        padding: 16px;
+
+        font-family: $fontText;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $blackColor;
+
+        border-radius: 15px;
+        margin-bottom: 12px;
+
+        >h5 {
+            display: none;
+        }
+    }
+
+    &-activityOption-correct {
+        background-color: $correctColor;
+        width: 100%;
+        height: auto;
+
+        padding: 16px;
+
+        font-family: $fontText;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $blackColor;
+
+        border-radius: 15px;
+        margin-bottom: 12px;
+
+        >h5 {
+            display: none;
+        }
+    }
+
+    &-activityOption-mistake {
+        background-color: $mistakeColor;
+        width: 100%;
+        height: auto;
+
+        padding: 16px;
+
+        font-family: $fontText;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $blackColor;
+
+        border-radius: 15px;
+        margin-bottom: 12px;
+
+        >h5 {
+            display: none;
+        }
+    }
+
+    &-activityOption-ghost {
+        background-color: $darkGrayColor;
+        width: 100%;
+        height: auto;
+
+        padding: 16px;
+
+        font-family: $fontText;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $blackColor;
+
+        border-radius: 15px;
+        margin-bottom: 12px;
+
+        z-index: 100;
+
+        >h5 {
+            display: none;
+        }
+    }
+
+    /////SLIDES/////
     &-slideInstru {
         display: flex;
         flex-direction: column;
@@ -439,10 +1158,71 @@ body {
 
         background-color: $whiteColor;
         border-radius: 25px;
-        padding: $verticalPadding;
+        padding: calc(#{$verticalPadding} + 3px);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+
+        cursor: pointer;
     }
 
-    //INSTRU PAGINATION
+    &-instruTitle {
+        width: fit-content;
+        font-family: $fontTitle;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        border-bottom: 2px solid $grayColor;
+
+        padding-bottom: 5px;
+        padding-right: 20px;
+
+        color: $blackColor;
+    }
+
+    &-instruContainer {
+        width: 100%;
+        height: calc(100% - 34px);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    &-instruIMG {
+        width: 389px;
+        height: 216px;
+
+        border-radius: 12px;
+
+        margin: 44px 0;
+    }
+
+    &-instruText {
+
+        width: 407px;
+
+        font-family: $fontText;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+
+        color: $blackColor;
+    }
+
     &-instruPag {
         width: 206px;
         height: 36px;
@@ -476,7 +1256,7 @@ body {
             background-color: $lightOrangeColor;
 
             >svg {
-    
+
                 >path {
                     fill: $whiteColor;
                 }
@@ -521,7 +1301,7 @@ body {
             background-color: $lightOrangeColor;
 
             >svg {
-    
+
                 >path {
                     fill: $whiteColor;
                 }
@@ -539,10 +1319,60 @@ body {
 
     }
 
+    //
+}
+*::-webkit-scrollbar {
+    width: 7px;
 }
 
-.Shadow {
-    box-shadow: 0px 4px 15px rgba($blackColor, 0.12);
+*::-webkit-scrollbar-track {
+    background: $grayColor;
+    border-radius: 5px,
 }
+
+*::-webkit-scrollbar-thumb {
+    background: $darkGrayColor;
+    border-radius: 5px,
+}
+
 
 //CUSTOM CSS FROM SWIPER LIB
+
+.toast-info {
+    background-color: $lightGreenColor !important;
+}
+
+.toast-message{
+    color: $whiteColor;
+    font-family: $fontTitle;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.toast-error {
+    background-color: $orangeColor !important;
+}
+
+#toast-container>div {
+    box-shadow: none;
+    border-radius: 10px;
+    opacity: 1;
+    cursor: pointer;
+
+    padding: 15px 15px 15px 25px;
+}
+
+#toast-container>div:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#toast-container>.toast-info {
+    background-image: none !important;
+    display: none;
+}
+
+#toast-container>.toast-error {
+    background-image: none !important;
+    display: none;
+}

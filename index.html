@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./libs/Animate/animate.css">
     <link rel="stylesheet" href="./libs/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
+
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                     <h3>Actividades</h3>
                 </div>
 
-                <div class="App-option" id="App-toResult">
+                <div class="App-option-disabled" id="App-toResult">
                     <h2>3</h2>
                     <h3>Resultados</h3>
                 </div>
@@ -72,15 +73,55 @@
                             <div class="App-instruWrapper swiper-wrapper">
 
                                 <div class="App-instru swiper-slide">
+                                    <h4 class="App-instruTitle">
+                                        Instrucciones
+                                    </h4>
 
+                                    <div class="App-instruContainer">
+                                        <img src="./src/img/instru/instru_0.png" alt="Imagen de Instrucciones"
+                                            class="App-instruIMG">
+
+                                        <p class="App-instruText">Para esta actividad vas a trabajar con información vista durante el curso, podrás encontrarla en la sección “Tus Opciones”.</p>
+                                    </div>
                                 </div>
-                                
-                                <div class="App-instru swiper-slide">
 
+                                <div class="App-instru swiper-slide">
+                                    <h4 class="App-instruTitle">
+                                        Instrucciones
+                                    </h4>
+
+                                    <div class="App-instruContainer">
+                                        <img src="./src/img/instru/instru_1.png" alt="Imagen de Instrucciones"
+                                            class="App-instruIMG">
+
+                                        <p class="App-instruText">Debes arrastrar y soltar tus opciones para clasificarlos en la categoría correspondiente según lo aprendido en la Unidad 3: Plan Básico.</p>
+                                    </div>
                                 </div>
 
                                 <div class="App-instru swiper-slide">
+                                    <h4 class="App-instruTitle">
+                                        Instrucciones
+                                    </h4>
 
+                                    <div class="App-instruContainer">
+                                        <img src="./src/img/instru/instru_2.png" alt="Imagen de Instrucciones"
+                                            class="App-instruIMG">
+
+                                        <p class="App-instruText">Puedes cambiar de sección en el panel de la izquierda. Cuando acabes de clasificar correctamente toda la información podrás ver los resultados.</p>
+                                    </div>
+                                </div>
+
+                                <div class="App-instru swiper-slide">
+                                    <h4 class="App-instruTitle">
+                                        Instrucciones
+                                    </h4>
+
+                                    <div class="App-instruContainer">
+                                        <img src="./src/img/instru/instru_3.png" alt="Imagen de Instrucciones"
+                                            class="App-instruIMG">
+
+                                        <p class="App-instruText">Para terminar la actividad debes clasificar toda la información correctamente. Cada vez que cometas un error perderás un poco de tu calificación.</p>
+                                    </div>
                                 </div>
 
                             </div>
@@ -113,14 +154,110 @@
                     <!-- Result -->
                     <div class="App-mainSlide App-slideResult swiper-slide">
 
+
+                        <div class="App-feedback">
+                            <div class="App-feedbackTop">
+                                <h2 class="App-feedbackTitle">Recomendaciones</h2>
+                            </div>
+
+                            <div class="App-feedbackList">
+                               
+
+                            </div>
+
+                            <div class="App-feedButton">
+
+                                <div class="App-repeat App-btn">
+                                    <svg width="17" height="15" viewBox="0 0 17 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.6833 10.7666V11.2666H12.1833H12.75C14.1195 11.2666 15.2333 10.1532 15.2333 8.78332V4.25C15.2333 2.88017 14.1195 1.76668 12.75 1.76668H4.25C2.88053 1.76668 1.76668 2.88013 1.76668 4.25V8.78339C1.76668 10.1532 2.88052 11.2667 4.25 11.2667H5.95C6.29888 11.2667 6.58332 11.5511 6.58332 11.9C6.58332 12.2489 6.2989 12.5334 5.95 12.5334H3.96668C2.05547 12.5334 0.5 10.9779 0.5 9.06668V3.96668C0.5 2.0555 2.05547 0.5 3.96668 0.5H13.0333C14.9445 0.5 16.5 2.0555 16.5 3.96668V9.06668C16.5 10.9779 14.9445 12.5334 13.0333 12.5334H12.1833H11.6833V13.0334V14.0167L8.8611 11.9L11.6833 9.78333V10.7666Z" />
+                                    </svg>
+                                    <h3>Repetir Prueba</h3>
+                                </div>
+
+                                <div class="App-finish App-btn">
+                                    <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.8106 1.94938C12.6931 1.86888 12.5431 1.85313 12.4111 1.9065C12.382 1.91875 9.55771 3.05975 7.18343 1.917C5.14514 0.934375 2.90029 1.39375 1.85714 1.70438V1.4375C1.85714 1.196 1.66514 1 1.42857 1C1.192 1 1 1.196 1 1.4375V14.5625C1 14.804 1.192 15 1.42857 15C1.66514 15 1.85714 14.804 1.85714 14.5625V9.62137C2.61657 9.3685 4.86743 8.76737 6.81743 9.708C7.744 10.1551 8.71343 10.3039 9.59371 10.3039C11.2866 10.3039 12.6477 9.7535 12.7326 9.7185C12.8937 9.65112 13 9.491 13 9.3125V2.3125C13 2.16725 12.9289 2.03163 12.8106 1.94938ZM12.1429 9.00275C11.3791 9.25562 9.12914 9.85412 7.18257 8.91612C5.14514 7.93437 2.90029 8.39375 1.85714 8.70438V2.62225C2.61657 2.36937 4.86743 1.76825 6.81743 2.70887C8.85314 3.68975 11.0997 3.23125 12.1429 2.91975V9.00275Z"
+                                            stroke-width="1.2" />
+                                    </svg>
+                                    <h3>Terminar</h3>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="App-right">
+        <div class="App-right swiper-container">
+
+            <div class="App-rightWrapper swiper-wrapper">
+
+                <div class="App-contextSlide swiper-slide">
+                    <!--variable-->
+                    <div class="App-indication">
+                        <h2>Arrastrar y Soltar</h2>
+                        <div class="App-animation"></div>
+                        <p><strong>Objetivo: </strong>Debes arrastrar y soltar los elementos a sus respectivas categorías.</p>
+                    </div>
+                </div>
+
+                <div class="App-contextSlide swiper-slide">
+                    <!--variable-->
+                    <div class="App-indication">
+                        <h2>Arrastrar y Soltar</h2>
+                        <div class="App-animation"></div>
+                        <p><strong>Objetivo: </strong>Debes arrastrar y soltar los elementos a sus respectivas categorías.</p>
+                    </div>
+                    <!--variable-->
+
+                    <h2 class="App-optionsTitle">Tus opciones</h2>
+
+                    <div class="App-optionList">
+                    </div>
+
+                </div>
+
+                <div class="App-contextSlide App-resultContext swiper-slide">
+                    <h3 class="App-resultTitle">Resultados</h3>
+
+                    <img src="./src/img/badge/b_0.png" alt="Badge img" class="App-badgeImg">
+
+                    <div class="App-emojiContent">
+                        <img src="./src/img/emoji/0.png" alt="Emoji img" class="App-emojiImg">
+                        <p class="App-emojiData">Debes esforzarte algo más, vuelve a intentarlo</p>
+                    </div>
+
+                    <div class="App-resultTime">
+                        <h3>Tiempo en Segundos</h3>
+                        <div class="App-timeContainer App-circleData">
+                            <p class="App-timeValue">100</p>
+                        </div>
+                    </div>
+
+                    <div class="App-resultCalification">
+                        <h3>Porcentaje de Calificación</h3>
+                        <div class="App-calificationContainer App-circleData">
+                            <p class="App-calificationValue">100</p>
+                        </div>
+                    </div>
+
+                    <div class="App-resultMistake">
+                        <h3>Cantidad de Errores</h3>
+                        <div class="App-mistakeContainer App-circleData">
+                            <p class="App-mistakeValue">100</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             <!--variable-->
+            <!--
             <div class="App-context">
 
                 <div class="App-imgContext"></div>
@@ -133,6 +270,9 @@
                         sem himenaeos as elit sem quam himenaeos elit...</p>
                 </div>
             </div>
+            -->
+
+            <img src="./src/img/gradient.png" alt="Gradient IMG" class="App-gradientFooter">
         </div>
 
     </div>
@@ -146,6 +286,7 @@
 <script src="./libs/md5/md5.min.js"></script>
 <script src="./libs/Toastr/toastr.min.js"></script>
 <script src="./libs/swiper/js/swiper.min.js"></script>
+<script src="./libs/SortableJS//SortableJS.js"></script>
 <!--CODE-->
 
 <script src="./js/main.js"></script>
