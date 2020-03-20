@@ -121,11 +121,21 @@ var mySwiperInstru = new Swiper('.App-instruSwiper', {
 
 btn_InstruPrev.addEventListener("click", () => {
   mySwiperInstru.slidePrev(500);
+
+  UpdatePaginationInstru();
 });
 
 btn_InstruNext.addEventListener("click", () => {
   mySwiperInstru.slideNext(500);
+
+  UpdatePaginationInstru();
 });
+
+function UpdatePaginationInstru(){
+  btn_InstruPag.innerHTML = (mySwiperInstru.realIndex + 1) + " / " + mySwiperInstru.slides.length;
+}
+
+UpdatePaginationInstru();
 
 //DASHBOARD
 let btn_Instru = document.getElementById("App-toInstru");
@@ -196,6 +206,7 @@ function SetOptionList() {
     }
   });
 
+  shuffle(dataRead.options);
   for (let index = 0; index < dataRead.options.length; index++) {
     const e = dataRead.options[index];
     AddItemOption(e);
@@ -318,6 +329,10 @@ function ValidateItemCategory(category, item) {
   }
 
   return false;
+}
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
 }
 
 //////SWIPER//////
@@ -719,8 +734,8 @@ more reliable than the onunload event and we want to make sure
 that Terminate is ALWAYS called.
 */
 
-/*
 window.onload = ScormProcessInitialize;
+/*
 window.onunload = ScormProcessFinish;
 window.onbeforeunload = ScormProcessFinish;
 */
